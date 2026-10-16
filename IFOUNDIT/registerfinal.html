@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFoundIT - Register</title>
+    
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="loginfinal.html">
+    <link rel="stylesheet" href="registerfinal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="forget.js"></script>  
+    
+</head>
+<body class="register-body">
+
+    <!-- BACK BUTTON -->
+    <a href="home.html" class="top-left-home">
+        <i class="fa-solid fa-arrow-left"></i> Home
+    </a>
+
+    <div class="register-wrapper">
+
+        <!-- Logo Header -->
+        <div class="register-logo-header">
+            <img src="LOGO.png" alt="IFoundIT Logo">
+            <span>IFoundIT</span>
+        </div>
+
+        <!-- Register Card -->
+        <div class="register-card">
+            <h2>Register</h2>
+            
+            <form id="registerForm">
+                <!-- First Name -->
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" required placeholder="Enter your first name">
+                </div>
+
+                <!-- Middle Name -->
+                <div class="form-group">
+                    <label for="middleName">Middle Name <span class="optional-text">(Optional)</span></label>
+                    <input type="text" id="middleName" placeholder="Enter your middle name">
+                </div>
+
+                <!-- Last Name -->
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" required placeholder="Enter your last name">
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="example@ifoundit.edu">
+                </div>
+
+                <!-- Contact Number -->
+                <div class="form-group">
+                    <label for="contactNumber">Contact Number</label>
+                    <input type="text" id="contactNumber" required placeholder="09XXXXXXXXX">
+                </div>
+
+                <!-- Year Level Dropdown -->
+                <div class="form-group">
+                    <label for="yearLevel">Year Level</label>
+                    <select id="yearLevel" required>
+                        <option value="">Select Level</option>
+                        <option value="elementary">Elementary</option>
+                        <option value="junior-high">Junior High</option>
+                        <option value="senior-high">Senior High</option>
+                        <option value="college">College</option>
+                    </select>
+                </div>
+
+                <!-- Section -->
+                <div class="form-group">
+                    <label for="section">Section</label>
+                    <input type="text" id="section" required placeholder="Enter your section">
+                </div>
+
+                <!-- Department / College (Optional) -->
+                <div class="form-group">
+                    <label for="department">Department / College <span class="optional-text">(Optional)</span></label>
+                    <input type="text" id="department" placeholder="Enter department if applicable">
+                </div>
+
+                <!-- Password Field -->
+                 <div class="form-group">
+                    <label for="newPassword">New Password</label>
+                    <div class="password-wrapper">
+                        <input 
+                            type="password" 
+                            id="newPassword" 
+                            required 
+                            placeholder="New Password"
+                        >
+                        <i class="fa-regular fa-eye-slash toggle-password" id="toggleNewPassword"></i>
+                    </div>
+                <div class="password-container">
+                      <div class="strength-meter-container">
+                        <ul class="requirements-list">
+                            <li id="reqLength"><i class="fa-solid fa-circle-xmark"></i> At least 8 characters</li>
+                            <li id="reqUpper"><i class="fa-solid fa-circle-xmark"></i> At least one uppercase letter (A-Z)</li>
+                            <li id="reqNumber"><i class="fa-solid fa-circle-xmark"></i> At least one number (0-9)</li>
+                            <li id="reqSpecial"><i class="fa-solid fa-circle-xmark"></i> At least one special character (!@#$%^&*)</li>
+                        </ul>
+                    </div>
+                </div> 
+                  
+
+                <!-- Confirm Password Field -->
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="confirmPassword" required minlength="8" placeholder="Re-enter your password">
+                        <i class="fa-regular fa-eye-slash toggle-password" id="toggleConfirmPassword"></i>
+                    </div>
+                </div>
+
+                <!-- Register Button -->
+                <button type="submit" class="register-btn">Register</button>
+                
+  
+            </form>
+
+            <!-- Link back to Login -->
+            <div class="already-account">
+                Already have an account? <a href="loginfinal.html">Log in</a>
+            </div>
+        </div>
+
+    </div>
+
+  <!-- JavaScript for Live Checklist Validation and Redirect -->
+   <script>
+
+    const registerForm = document.getElementById("registerForm");
+
+    const newPasswordInput = document.getElementById("newPassword");
+    const confirmPasswordInput = document.getElementById("confirmPassword");
+
+    const reqLength = document.getElementById("reqLength");
+    const reqUpper = document.getElementById("reqUpper");
+    const reqNumber = document.getElementById("reqNumber");
+    const reqSpecial = document.getElementById("reqSpecial");
+
+    const registerButton = document.querySelector(".register-btn");
+
+
+    // ==============================
+    // PASSWORD CHECKLIST
+    // ==============================
+
+    newPasswordInput.addEventListener("input", function () {
+
+        const password = newPasswordInput.value;
+
+
+        // 8 characters
+        if (password.length >= 8) {
+
+            reqLength.classList.add("valid");
+
+            reqLength.innerHTML =
+                '<i class="fa-solid fa-circle-check"></i> At least 8 characters';
+
+        } else {
+
+            reqLength.classList.remove("valid");
+
+            reqLength.innerHTML =
+                '<i class="fa-solid fa-circle-xmark"></i> At least 8 characters';
+
+        }
+
+
+        // Uppercase
+        if (/[A-Z]/.test(password)) {
+
+            reqUpper.classList.add("valid");
+
+            reqUpper.innerHTML =
+                '<i class="fa-solid fa-circle-check"></i> At least one uppercase letter (A-Z)';
+
+        } else {
+
+            reqUpper.classList.remove("valid");
+
+            reqUpper.innerHTML =
+                '<i class="fa-solid fa-circle-xmark"></i> At least one uppercase letter (A-Z)';
+
+        }
+
+
+        // Number
+        if (/[0-9]/.test(password)) {
+
+            reqNumber.classList.add("valid");
+
+            reqNumber.innerHTML =
+                '<i class="fa-solid fa-circle-check"></i> At least one number (0-9)';
+
+        } else {
+
+            reqNumber.classList.remove("valid");
+
+            reqNumber.innerHTML =
+                '<i class="fa-solid fa-circle-xmark"></i> At least one number (0-9)';
+
+        }
+
+
+        // Special character
+        if (/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+
+            reqSpecial.classList.add("valid");
+
+            reqSpecial.innerHTML =
+                '<i class="fa-solid fa-circle-check"></i> At least one special character (!@#$%^&*)';
+
+        } else {
+
+            reqSpecial.classList.remove("valid");
+
+            reqSpecial.innerHTML =
+                '<i class="fa-solid fa-circle-xmark"></i> At least one special character (!@#$%^&*)';
+
+        }
+
+    });
+
+
+    // ==============================
+    // SHOW / HIDE NEW PASSWORD
+    // ==============================
+
+    const toggleNewPassword =
+        document.getElementById("toggleNewPassword");
+
+    toggleNewPassword.addEventListener("click", function () {
+
+        if (newPasswordInput.type === "password") {
+
+            newPasswordInput.type = "text";
+
+            this.classList.remove("fa-eye-slash");
+            this.classList.add("fa-eye");
+
+        } else {
+
+            newPasswordInput.type = "password";
+
+            this.classList.remove("fa-eye");
+            this.classList.add("fa-eye-slash");
+
+        }
+
+    });
+
+
+    // ==============================
+    // SHOW / HIDE CONFIRM PASSWORD
+    // ==============================
+
+    const toggleConfirmPassword =
+        document.getElementById("toggleConfirmPassword");
+
+    toggleConfirmPassword.addEventListener("click", function () {
+
+        if (confirmPasswordInput.type === "password") {
+
+            confirmPasswordInput.type = "text";
+
+            this.classList.remove("fa-eye-slash");
+            this.classList.add("fa-eye");
+
+        } else {
+
+            confirmPasswordInput.type = "password";
+
+            this.classList.remove("fa-eye");
+            this.classList.add("fa-eye-slash");
+
+        }
+
+    });
+
+
+    // ==============================
+    // REGISTER
+    // ==============================
+
+    registerForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+
+        const password =
+            newPasswordInput.value.trim();
+
+        const confirmPassword =
+            confirmPasswordInput.value.trim();
+
+
+        // Check password requirements
+
+        const hasLength =
+            password.length >= 8;
+
+        const hasUpper =
+            /[A-Z]/.test(password);
+
+        const hasNumber =
+            /[0-9]/.test(password);
+
+        const hasSpecial =
+            /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+
+        // Empty password
+
+        if (password === "" || confirmPassword === "") {
+
+            alert("Please fill in all fields before registering.");
+
+            return;
+        }
+
+
+        // Password requirements
+
+        if (
+            !hasLength ||
+            !hasUpper ||
+            !hasNumber ||
+            !hasSpecial
+        ) {
+
+            alert("Please meet all password requirements.");
+
+            return;
+        }
+
+
+        // Password confirmation
+
+        if (password !== confirmPassword) {
+
+            alert("Passwords do not match!");
+
+            return;
+        }
+
+
+        // ==============================
+        // REGISTRATION SUCCESS
+        // ==============================
+
+        registerButton.innerText =
+            "REGISTERED ✓";
+
+        registerButton.style.background =
+            "#10b981";
+
+        registerButton.style.color =
+            "#ffffff";
+
+        registerButton.disabled = true;
+
+
+        // Redirect to login
+
+        setTimeout(function () {
+
+            window.location.href = "loginfinal.html";
+
+        }, 1000);
+
+    });
+
+</script>
+
+</body>
+</html>

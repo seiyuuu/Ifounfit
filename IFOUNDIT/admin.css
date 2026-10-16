@@ -1,0 +1,232 @@
+/* Admin pages (Reports, Users, Approval).
+   Load order: global.css first (header, base styles), then this file. */
+
+:root {
+  --navy: #0B3A73;
+  --sky: #e3f1fc;
+  --sky-deep: #b9d3ee;
+  --ink: #1d2733;
+  --muted: #5d6b7b;
+  --line: #d5dde6;
+  --pending: #e0605a;
+  --found: #1fa65a;
+  --lost: #c98a0b;
+  --claimed: #5d6b7b;
+}
+
+/* The header comes from global.css; everything below sits under it. */
+.hero, .panel, .toast { font-family: 'Lexend', sans-serif; color: var(--ink); }
+.hero h1, .hero h2, .hero h3, .hero p, .panel h2, .panel h3, .panel p, .panel ul { margin: 0; padding: 0; }
+
+/* Hero */
+.hero {
+  padding: 28px 24px 0;
+  background: linear-gradient(180deg, var(--sky) 0%, var(--sky-deep) 100%);
+  text-align: center;
+}
+.hero h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.8rem;
+  color: var(--navy);
+  margin-bottom: 22px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+  padding: 14px 16px;
+  background: #fff;
+  border-left: 3px solid var(--navy);
+  box-shadow: 6px 8px 10px rgba(11, 58, 115, .22);
+}
+.stat-label { font-size: .8rem; color: var(--muted); }
+.stat strong {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 28px;
+  padding-top: 8px;
+  border-bottom: 1px solid #8ea4bd;
+}
+.tabs a {
+  padding: 8px 2px;
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+}
+.tabs a.active { color: var(--navy); border-bottom-color: var(--navy); }
+.tabs a:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }
+
+/* Panel (Reports / Users / Approval) */
+.panel {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(11, 58, 115, .25);
+}
+.panel-head {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  text-align: center;
+}
+.panel-head h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  color: var(--navy);
+}
+.filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.filters select, .filters input {
+  font-family: inherit;
+  font-size: .8rem;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--ink);
+}
+.filters select:focus, .filters input:focus { outline: 2px solid var(--navy); outline-offset: 1px; }
+
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: .82rem; }
+th {
+  text-align: center;
+  font-weight: 500;
+  color: var(--muted);
+  padding: 8px 10px;
+  border-bottom: 2px solid var(--line);
+}
+td { padding: 10px; text-align: center; border-bottom: 1px solid #edf1f5; }
+td.empty { text-align: center; color: var(--muted); padding: 24px; }
+.cell-sub { display: block; margin-top: 2px; font-size: .72rem; color: var(--muted); }
+
+.status { font-weight: 500; }
+.status.pending  { color: var(--pending); }
+.status.found    { color: var(--found); }
+.status.lost     { color: var(--lost); }
+.status.claimed  { color: var(--claimed); }
+.status.rejected { color: var(--claimed); }
+
+/* Online / offline presence */
+.presence { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; }
+.presence .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--claimed); }
+.presence.online { color: var(--found); }
+.presence.online .dot { background: var(--found); box-shadow: 0 0 0 3px rgba(31, 166, 90, .2); }
+.presence.offline { color: var(--muted); }
+
+/* Users */
+.role-badge {
+  display: inline-block;
+  padding: 3px 16px;
+  border-radius: 999px;
+  background: #12203f;
+  color: #3cc4d6;
+  font-size: .78rem;
+  font-weight: 400;
+}
+.role-user { font-weight: 600; }
+
+/* Approval */
+.approval-list { display: grid; gap: 12px; list-style: none; }
+.approval-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 3px 8px rgba(11, 58, 115, .14);
+}
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+  font-size: 1.25rem;
+}
+.approval-thumb.placeholder i, .report-thumb.placeholder i { opacity: .6; }
+
+/* Photo column in Reports table */
+.report-thumb {
+  display: block;
+  width: 56px;
+  height: 48px;
+  margin: 0 auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+.report-thumb.placeholder { background: linear-gradient(180deg, #cfe9fb 0 58%, #a9c25a 58% 100%); }
+.approval-info { flex: 1; min-width: 0; text-align: left; }
+.approval-info h3 { font-family: 'Outfit', sans-serif; font-size: 1rem; color: #333; }
+.approval-info p { font-size: .8rem; color: var(--ink); margin-top: 2px; }
+.approval-info p.muted { font-size: .74rem; color: var(--muted); }
+.approval-actions { display: flex; flex: none; gap: 8px; }
+.approval-empty { padding: 28px; text-align: center; font-size: .85rem; color: var(--muted); }
+
+.btn-approve, .btn-reject {
+  font-family: inherit;
+  font-size: .8rem;
+  padding: 7px 18px;
+  border: 1px solid;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.btn-approve { background: #dcf5e6; border-color: #a8e0bf; color: #166a3c; }
+.btn-approve:hover { background: #c6eed7; }
+.btn-reject { background: #fde4e2; border-color: #f4b9b4; color: #a3322b; }
+.btn-reject:hover { background: #fbd0cc; }
+.btn-approve:focus-visible, .btn-reject:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }
+
+/* Confirmation message */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  z-index: 1100;
+  max-width: calc(100% - 24px);
+  transform: translateX(-50%);
+  padding: 10px 18px;
+  border-radius: 6px;
+  background: var(--navy);
+  color: #fff;
+  font-size: .82rem;
+}
+
+@media (max-width: 520px) {
+  .hero { padding: 20px 14px 0; }
+  .hero h1 { font-size: 1.4rem; }
+  .panel { margin: 16px 10px; padding: 14px; }
+  .filters, .filters select, .filters input { width: 100%; }
+  .approval-item { flex-wrap: wrap; }
+  .approval-info { flex-basis: calc(100% - 90px); }
+  .approval-actions { width: 100%; }
+  .approval-actions button { flex: 1; }
+}

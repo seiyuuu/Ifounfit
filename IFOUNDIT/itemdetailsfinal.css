@@ -1,0 +1,483 @@
+/* --- GLOBAL STYLES --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f2f6fa;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- NAVBAR STYLES --- */
+.navbar {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.logo-container b {
+    font-size: 22px;
+    color: #0b2241;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.nav-links a.active {
+    color: #0b364c;
+    border-bottom: 2px solid #176c9b;
+    padding-bottom: 4px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    z-index: 100;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    font-weight: normal;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* --- MAIN CONTAINER --- */
+.main-content {
+    max-width: 1000px;
+    width: 100%;
+    margin: 30px auto 60px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+/* Breadcrumb Title */
+.breadcrumb {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.crumb-inactive {
+    color: #94a3b8;
+    text-decoration: none;
+}
+
+.crumb-separator {
+    color: #0066cc;
+    margin: 0 6px;
+}
+
+.crumb-active {
+    color: #0066cc;
+}
+
+.details-container {
+    display: grid !important;
+    grid-template-columns: 350px 1fr !important; /* Fixed width sa kaliwa, flexible sa kanan */
+    align-items: stretch !important; /* Dito pipiliting pantay ang taas ng kaliwa at kanan */
+    gap: 30px !important;
+    max-width: 1000px;
+    width: 100%;
+    margin: 40px auto;
+}
+@media (max-width: 768px) {
+    .details-container {
+        grid-template-columns: 1fr !important;
+    }
+    .item-card-image-only {
+        height: 350px !important; /* Babalik sa fixed height kapag naka-mobile */
+    }
+}
+/* --- ISINAGAD NA KALIWANG KOLUM AT LARAWAN --- */
+.left-column {
+    display: flex !important;
+    flex-direction: column !important;
+}
+.item-card-image-only {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex !important;
+    flex: 1 !important; /* Sasagad sa buong taas ng grid row */
+}
+.item-card-image-only img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+.card-tags {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+}
+
+.tag-category, .tag-date {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.tag-category { color: #d97706; }
+.tag-date { color: #64748b; }
+.card-body {
+    padding: 30px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1; /* Pinupuno ang natitirang espasyo pababa */
+}
+
+.card-body h3 {
+    font-size: 20px; /* Medyo pinalaki rin para mas tumugma sa 2nd pic */
+    color: #1a202c;
+    margin-bottom: 10px;
+}
+
+.card-body .location {
+    font-size: 14px;
+    color: #e53e3e;
+    font-weight: 600;
+    margin: 0;
+}
+
+.btn-details {
+    background-color: #0b3c5d;
+    color: white;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 24px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.right-column {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+}
+
+/* Status Badges */
+.status-header {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.badge-pending {
+    background-color: #ff6b00;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px 16px;
+    border-radius: 20px;
+}
+
+.badge-id {
+    border: 1.5px solid #334155;
+    color: #334155;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 12px;
+    border-radius: 20px;
+}
+
+.item-title {
+    font-size: 28px;
+    color: #0066cc;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+/* Info Card Box */
+.info-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 16px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    margin-bottom: 20px;
+}
+
+.info-row {
+    display: flex;
+    gap: 60px;
+}
+
+.info-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-group.margin-top {
+    margin-top: 12px;
+}
+
+.info-label {
+    font-size: 10px;
+    color: #94a3b8;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.info-value {
+    font-size: 12px;
+    color: #334155;
+    font-weight: 600;
+}
+
+.location-text {
+    color: #e53e3e;
+}
+
+/* Description */
+.description-section {
+    margin-bottom: 25px;
+}
+
+.description-section h4 {
+    font-size: 12px;
+    color: #94a3b8;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.description-section p {
+    font-size: 12px;
+    color: #475569;
+    line-height: 1.5;
+}
+
+/* Card styling para sa Description mo lamang */
+.description-card-box {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 18px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #0b3c5d; /* Elegant accent line sa kaliwang gilid */
+    margin-bottom: 16px;
+}
+
+.description-card-box h4 {
+    font-size: 12px;
+    color: #4f6d97;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 6px 0;
+}
+
+.description-card-box p {
+    font-size: 14px;
+    color: #323a44;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Claim Box */
+.claim-box {
+    background-color: #c1d9ee;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.reported-by-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #334155;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.user-icon-small {
+    width: 24px;
+    height: 24px;
+    background-color: #cbd5e1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #334155;
+}
+
+.badge-reporter {
+    border: 1px solid #64748b;
+    background-color: #ffffff;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #334155;
+}
+
+.claim-prompt {
+    font-size: 13px;
+    color: #475569;
+    margin-bottom: 15px;
+}
+
+.btn-claim {
+    display: inline-block;
+    background-color: #0b2241;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 24px;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s;
+}
+
+.btn-claim:hover {
+    background-color: #f1f5f9;
+    color: #0b2241;
+}
+
+/* --- FOOTER STYLES --- */
+footer {
+    background-color: #032b64;
+    color: #ffffff;
+    padding: 40px 50px 20px 50px;
+    margin-top: auto;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 180px;
+}
+
+.brand-col { flex: 1.3; }
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.footer-logo img {
+    width: 38px;
+    height: 38px;
+}
+
+.footer-logo span {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.brand-col p {
+    font-size: 13px;
+    color: #bcd2eb;
+}
+
+.footer-col h4 {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 8px; }
+
+.footer-col ul li a {
+    color: #bcd2eb;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 25px 0 15px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #bcd2eb;
+}
+
+.footer-legal a {
+    color: #bcd2eb;
+    text-decoration: none;
+    margin-left: 15px;
+}

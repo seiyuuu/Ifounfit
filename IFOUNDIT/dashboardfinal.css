@@ -1,0 +1,263 @@
+/* --- DASHBOARD SPECIFIC STYLES --- */
+body {
+    background-color: #f8fafc;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.header-nav-links {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.header-nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.header-nav-links a.active-nav {
+    color: var(--navy-dark);
+    font-weight: 700;
+}
+
+.dashboard-main {
+    padding: 40px 8%;
+}
+
+/* Welcome Section */
+.welcome-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.welcome-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.welcome-text h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--navy-dark);
+    margin: 0 0 12px 0;
+    letter-spacing: -1px;
+}
+
+.welcome-text p {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin: 0 0 24px 0;
+    line-height: 1.5;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.office-info {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.office-info p {
+    margin: 0;
+}
+
+/* Updates Card */
+.updates-card {
+    background: #eaf3fd;
+    border-radius: 16px;
+    padding: 30px;
+    width: 340px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.updates-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.updates-header h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--navy-dark);
+}
+
+.badge {
+    background-color: #38bdf8;
+    color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+}
+
+.updates-body {
+    text-align: center;
+    padding: 20px 0;
+    color: var(--text-muted);
+}
+
+.updates-body i {
+    font-size: 32px;
+    margin-bottom: 12px;
+    color: #94a3b8;
+}
+
+.updates-body p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--navy-dark);
+}
+
+/* Stats Cards Grid */
+.stats-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.stat-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    flex: 1;
+    min-width: 260px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stat-card.border-red { border-left: 4px solid #0284c7; }
+.stat-card.border-green { border-left: 4px solid #0284c7; }
+
+.stat-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+.stat-card h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin: 5px 0 0 0;
+    color: var(--navy-dark);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.stat-icon.bg-red { 
+    background: #ecfdf5 !important; 
+    color: #0284c7 !important; 
+}
+
+.stat-icon.bg-green { 
+    background: #ecfdf5 !important; 
+    color: #0284c7 !important; 
+}
+
+/* Claim Requests Section */
+.claim-section {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    margin-bottom: 60px;
+}
+
+.claim-section h2 {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--navy-dark);
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 1fr;
+    font-weight: 700;
+    color: var(--navy-dark);
+    font-size: 14px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table-empty {
+    padding: 40px 0;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 15px;
+}
+
+/* Campus Recovery Stats Banner */
+.campus-banner {
+    background: linear-gradient(135deg, #0b2241 0%, #0f4c81 100%);
+    border-radius: 20px;
+    padding: 40px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.campus-banner h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.banner-stats {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.banner-stat-item {
+    text-align: center;
+}
+
+.banner-stat-item span {
+    font-size: 12px;
+    font-weight: 700;
+    color: #93c5fd;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.banner-stat-item h3 {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 5px 0 0 0;
+}

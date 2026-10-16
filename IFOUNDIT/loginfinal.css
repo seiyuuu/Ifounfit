@@ -1,0 +1,202 @@
+/* --- LOGIN PAGE STYLES --- */
+
+.login-body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Kailangan para sa absolute positioning ng top-left button */
+    /* Soft vibrant blue gradient over background image */
+    background: linear-gradient(135deg, rgba(200, 225, 250, 0.82), rgba(165, 205, 240, 0.78)), 
+                url('Background.jpg') no-repeat center center/cover;
+}
+
+/* --- TOP LEFT HOME BUTTON --- */
+.top-left-home {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0b2241;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.25s ease;
+    z-index: 100;
+}
+
+.top-left-home:hover {
+    background-color: #0b2241;
+    color: #ffffff;
+    transform: translateX(-4px);
+}
+
+.top-left-home i {
+    font-size: 14px;
+}
+
+/* Container Size */
+.login-wrapper {
+    width: 100%;
+    max-width: 640px; 
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Logo Section */
+.login-logo-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.login-logo-header img {
+    height: 56px;
+    width: auto;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.login-logo-header span {
+    font-size: 42px;
+    font-weight: 800;
+    color: #0b2241;
+    letter-spacing: -0.5px;
+}
+
+/* Main Login Card */
+.login-card {
+    background-color: #f2f7fc;
+    width: 100%;
+    padding: 55px 55px 50px 55px; 
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 20px 45px rgba(11, 34, 65, 0.12), 
+                0 4px 12px rgba(255, 255, 255, 0.5) inset;
+}
+
+.login-card h2 {
+    text-align: center;
+    font-size: 44px;
+    font-weight: 800;
+    color: #0b2241;
+    margin: 0 0 2px 0; 
+    letter-spacing: -0.5px;
+}
+
+.login-subtitle {
+    text-align: center;
+    font-size: 17px;
+    color: #506680;
+    margin-top: 0; 
+    margin-bottom: 38px;
+    font-weight: 500;
+}
+
+/* Form Group & Input Fields */
+.form-group {
+    margin-bottom: 26px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 18px 22px;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    font-size: 17px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.25s ease;
+}
+
+.form-group input:focus {
+    border-color: #1d72b8;
+    box-shadow: 0 0 0 4px rgba(29, 114, 184, 0.15);
+}
+
+/* Password Eye Icon Alignment */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 22px;
+    color: #64748b;
+    cursor: pointer;
+    font-size: 20px;
+    transition: color 0.2s ease;
+}
+
+.toggle-password:hover {
+    color: #0b2241;
+}
+
+/* Forgot Password Link */
+.forgot-wrapper {
+    text-align: right;
+    margin-top: -8px;
+    margin-bottom: 32px;
+}
+
+.forgot-link {
+    font-size: 15px;
+    color: #2b6cb0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.forgot-link:hover {
+    color: #1a4971;
+    text-decoration: underline;
+}
+
+/* Log In Button */
+.login-btn {
+    width: 55%;
+    display: block;
+    margin: 0 auto;
+    padding: 16px 0;
+    background: linear-gradient(135deg, #0b2241 0%, #1a4971 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(11, 34, 65, 0.28);
+    transition: all 0.25s ease;
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #07172e 0%, #0d3254 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(11, 34, 65, 0.35);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}

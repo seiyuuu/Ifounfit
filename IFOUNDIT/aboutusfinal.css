@@ -1,0 +1,169 @@
+
+body {
+    background: linear-gradient(rgba(240, 244, 248, 0.65), rgba(240, 244, 248, 0.65)), url("Background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.about-page {
+    max-width: 1000px;
+    width: 100%;
+    margin: 40px auto 60px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 20px;
+}
+
+.dashboard-header-section {
+    margin-bottom: 5px;
+}
+
+.page-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: #1d3366;
+    margin: 0 0 6px 0;
+    letter-spacing: -0.5px;
+}
+
+.page-subtitle {
+    font-size: 22px;
+    color: #000000;
+    margin: 0;
+}
+
+.about-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+}
+
+/* Main Description Paragraphs */
+.main-desc-card p {
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.3;
+    margin-bottom: 16px;
+}
+
+.main-desc-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Mission & Vision Container */
+.mission-vision-container {
+    display: flex;
+    gap: 24px;
+}
+
+.mission-card, .vision-card {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-card {
+    border-left: 5px solid #0284c7; 
+}
+
+.vision-card {
+    border-left: 5px solid #0284c7; 
+}
+
+.mv-title {
+    font-size: 37px;
+    font-weight: 800;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.mission-card p, .vision-card p {
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.history-card {
+    border-left: 5px solid #0284c7;
+}
+
+.history-card h2 {
+    font-size: 37px;
+    color: #000000;
+    font-weight: 800;
+    margin: 0 0 16px 0;
+}
+
+.history-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.history-card ul li {
+    font-size: 14px;
+    color: #000000;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.history-card ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Contact Us Section */
+.contact-section h3 {
+    font-size: 37px;
+    color: #000000;
+    font-weight: 800;
+    margin: 0 0 12px 0;
+}
+
+.contact-section p {
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.contact-section p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .mission-vision-container {
+        flex-direction: column;
+    }
+}
+.dashboard-header-section {
+    position: relative;
+    margin-bottom: 5px;
+    padding: 15px 0 15px 125px;
+    overflow: hidden;
+}
+
+.header-logo-bg {
+    position: absolute;
+    top: 50%;
+    left: 15px; 
+    transform: translateY(-50%);
+    width: 100px; 
+    height: 100px;
+    background-image: url('logo.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.80; 
+    pointer-events: none;
+    z-index: 0;
+}
+
+.page-title, .page-subtitle {
+    position: relative;
+    z-index: 1;
+}

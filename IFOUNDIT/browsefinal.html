@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFoundIT - Browse Items</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="browsefinal.css">
+     <link rel="stylesheet" href="itemdetailsfinal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js"></script>
+
+</head>
+<body style="margin: 0; background-color: #f8fafc; font-family: sans-serif;">
+
+
+    <header class="dashboard-navbar">
+        <a href="dashboardfinal.html" class="dashboard-logo-area">
+            <img src="LOGO.png" alt="IFoundIT Logo" style="height: 35px; width: auto; object-fit: contain;">
+            <span>IFoundIT</span>
+        </a>
+       
+        <nav class="dashboard-nav-links">
+            <a href="dashboardfinal.html" class="active">DASHBOARD</a>
+           
+             <div class="dropdown">
+                <a href="#">REPORT <i class="fa-solid fa-chevron-down" style="font-size: 10px; margin-left: 4px;"></i></a>
+                <div class="dropdown-content">
+                    <a href="reportfoundfinal.html"><i class="fa-solid fa-box-open" style="margin-right: 8px; color: #10b981;"></i> Report Found Item</a>
+                    <a href="reportlostfinal.html"><i class="fa-solid fa-magnifying-glass" style="margin-right: 8px; color: #e11d48;"></i> Report Lost Item</a>
+                </div>
+            </div>
+            <a href="browsefinal.html" class="active">BROWSE</a>
+            <a href="claimrequestfinal.html" class="active">CLAIM REQUEST</a>      
+            <a href="aboutusfinal.html" class="active">ABOUT US</a>
+        </nav>
+
+
+        <div>
+            <a href="home.html" class="dashboard-logout-btn">Logout</a>  
+        </div>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+
+        <!-- Page Titles -->
+        <div class="page-title-section" style="padding: 20px 8% 0 8%;">
+            <h1>BROWSE ITEMS</h1>
+            <div class="section-subtitle">
+                <h2>ALL ITEMS</h2>
+                <div class="title-underline"></div>
+            </div>
+        </div>
+
+
+        <!-- BROWSE HEADER & TOOLBAR -->
+        <div class="browse-header-container" style="padding: 10px 8%;">
+            <div class="browse-toolbar">
+                <!-- Search Input -->
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="searchInput" placeholder="Search items or location...">
+                </div>
+
+
+                <!-- Filter Dropdown -->
+                <div class="filter-box">
+                    <select id="categoryFilter">
+                        <option value="ALL">All Categories</option>
+                        <option value="Personal Belongings">Personal Belongings</option>
+                        <option value="School Supply">School Supply</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Clothing/Accessories">Clothing/Accessories</option>
+                    </select>
+                </div>
+
+
+                <!-- View Toggle Buttons -->
+                <div class="view-toggle-container view-toggle-pill">
+                    <button type="button" id="listViewBtn" class="toggle-btn" title="List View">
+                        <i class="fa-solid fa-list-ul"></i>
+                    </button>
+                    <button type="button" id="gridViewBtn" class="toggle-btn active" title="Grid View">
+                        <i class="fa-solid fa-border-all"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ITEMS CONTAINER -->
+        <div id="itemsContainer" class="items-container grid-view" style="padding: 20px 8%;">
+
+
+            <!-- Card 1 -->
+            <div class="item-card" data-category="Personal Belongings">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1785223932005-188bbd9b948a" alt="Umbrella">
+                    <div class="card-tags">
+                        <span class="tag-category">🏷️ Personal Belongings</span>
+                        <span class="tag-date">Sep 24, 2026</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="item-title">Umbrella</h3>
+                    <p class="location item-location">📍 Room 111 (Main)</p>
+                    <a href="itemdetails(umbrella).html" class="btn-details">VIEW DETAILS</a>
+                </div>
+            </div>
+
+
+            <!-- Card 2 -->
+            <div class="item-card" data-category="School Supply">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1574607383077-47ddc2dc51c4" alt="Scientific Calculators">
+                    <div class="card-tags">
+                        <span class="tag-category">🏷️ School Supply</span>
+                        <span class="tag-date">Sep 25, 2026</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="item-title">Scientific Calculators</h3>
+                    <p class="location item-location">📍 Room 112 (Main)</p>
+                    <a href="itemdetailsfimal.html" class="btn-details">VIEW DETAILS</a>
+                </div>
+            </div>
+
+
+            <!-- Card 3 -->
+            <div class="item-card" data-category="Personal Belongings">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1585687635785-994bda55c78e" alt="Make up pouch">
+                    <div class="card-tags">
+                        <span class="tag-category">🏷️ Personal Belongings</span>
+                        <span class="tag-date">Sep 25, 2026</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="item-title">Make up pouch</h3>
+                    <p class="location item-location">📍 CR Girls 2nd Floor (Main)</p>
+                    <a href="itemdetails(makeuppouch).html" class="btn-details">VIEW DETAILS</a>
+                </div>
+            </div>
+
+
+            <!-- Card 4 -->
+            <div class="item-card" data-category="Electronics">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=500" alt="iOS Charger">
+                    <div class="card-tags">
+                        <span class="tag-category">🏷️ Electronics</span>
+                        <span class="tag-date">Sep 24, 2026</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="item-title">iOS Charger</h3>
+                    <p class="location item-location">📍 Room 321 (Main)</p>
+                    <a href="itemdetails(ioscharger).html" class="btn-details">VIEW DETAILS</a>
+                </div>
+            </div>
+
+
+            <!-- Card 5 -->
+            <div class="item-card" data-category="Personal Belongings">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=400" alt="Tumbler">
+                    <div class="card-tags">
+                        <span class="tag-category">🏷️ Personal Belongings</span>
+                        <span class="tag-date">Sep 25, 2026</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="item-title">Tumbler</h3>
+                    <p class="location item-location">📍 Canteen</p>
+                    <a href="itemdetails(tumbler).html" class="btn-details">VIEW DETAILS</a>
+                </div>
+            </div>
+
+
+            <!-- Card 6 -->
+            <div class="item-card" data-category="Personal Belongings">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?w=400" alt="Wallet">
+                    <div class="card-tags">
+                        <span class="tag-category">🏷️ Personal Belongings</span>
+                        <span class="tag-date">Sep 26, 2026</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="item-title">Wallet</h3>
+                    <p class="location item-location">📍 Canteen (Main)</p>
+                    <a href="itemdetails(wallet).html" class="btn-details">VIEW DETAILS</a>
+                </div>
+            </div>
+
+
+            <!-- Card 7 -->
+            <div class="item-card" data-category="Electronics">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505" alt="Cellphone">
+                    <div class="card-tags">
+                        <span class="tag-category">🏷️ Electronics</span>
+                        <span class="tag-date">Sep 27, 2026</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="item-title">Cellphone</h3>
+                    <p class="location item-location">📍 Room 101 (Main)</p>
+                    <a href="itemdetails(cellphone).html" class="btn-details">VIEW DETAILS</a>
+                </div>
+            </div>
+
+
+            <!-- Card 8 -->
+            <div class="item-card" data-category="Clothing/Accessories">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1717605383946-96c6884c36b4" alt="Bracelet">
+                    <div class="card-tags">
+                        <span class="tag-category">🏷️ Clothing/Accessories</span>
+                        <span class="tag-date">Sep 26, 2026</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="item-title">Bracelet</h3>
+                    <p class="location item-location">📍 Room 204 (Main)</p>
+                    <a href="itemdetails(bracelet).html" class="btn-details">VIEW DETAILS</a>
+                </div>
+            </div>
+
+
+            <!-- Card 9 -->
+            <div class="item-card" data-category="Clothing/Accessories">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400" alt="Necklace">
+                    <div class="card-tags">
+                        <span class="tag-category">🏷️ Clothing/Accessories</span>
+                        <span class="tag-date">Sep 24, 2026</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="item-title">Necklace</h3>
+                    <p class="location item-location">📍 Room 202 (LS)</p>
+                    <a href="itemdetails(necklace).html" class="btn-details">VIEW DETAILS</a>
+                </div>
+            </div>
+
+
+            <!-- Card 10 -->
+            <div class="item-card" data-category="Electronics">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="Watch">
+                    <div class="card-tags">
+                        <span class="tag-category">🏷️ Electronics</span>
+                        <span class="tag-date">Sep 24, 2026</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="item-title">Watch</h3>
+                    <p class="location item-location">📍 Room 222 (Main)</p>
+                    <a href="itemdetails(watch).html" class="btn-details">VIEW DETAILS</a>
+                </div>
+            </div>
+
+
+            <!-- Card 11 -->
+            <div class="item-card" data-category="School Supply">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1632822300275-9867abf24bbe" alt="Pencil Case">
+                    <div class="card-tags">
+                        <span class="tag-category">🏷️ School Supply</span>
+                        <span class="tag-date">Sep 26, 2026</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="item-title">Pencil Case</h3>
+                    <p class="location item-location">📍 Library (Main)</p>
+                    <a href="itemdetails(Pecilcase).html" class="btn-details">VIEW DETAILS</a>
+                </div>
+            </div>
+
+
+            <!-- Card 12 -->
+            <div class="item-card" data-category="School Supply">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1661732017125-f425c3e86467" alt="Art Materials">
+                    <div class="card-tags">
+                        <span class="tag-category">🏷️ School Supply</span>
+                        <span class="tag-date">Sep 25, 2026</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="item-title">Art Materials</h3>
+                    <p class="location item-location">📍 Room 103 (Main)</p>
+                    <a href="itemdetails(artmaterials).html" class="btn-details">VIEW DETAILS</a>
+                </div>
+            </div>
+
+
+            <!-- Card 13 -->
+            <div class="item-card" data-category="Clothing/Accessories">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1652837345706-6a0f9c0148c0" alt="Eye Glass">
+                    <div class="card-tags">
+                        <span class="tag-category">🏷️ Clothing/Accessories</span>
+                        <span class="tag-date">Sep 24, 2026</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="item-title">Eye Glass</h3>
+                    <p class="location item-location">📍 CR Boys 1st Floor (Main)</p>
+                    <a href="itemdetails(eyeglass).html" class="btn-details">VIEW DETAILS</a>
+                </div>
+            </div>
+
+
+            <!-- Card 14 -->
+            <div class="item-card" data-category="Personal Belongings">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1692506530242-c12d6c3ae2e2" alt="Gym Bag">
+                    <div class="card-tags">
+                        <span class="tag-category">🏷️ Personal Belongings</span>
+                        <span class="tag-date">Sep 25, 2026</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="item-title">Gym Bag</h3>
+                    <p class="location item-location">📍 Quadrangle</p>
+                    <a href="itemdetails(gymbag).html" class="btn-details">VIEW DETAILS</a>
+                </div>
+            </div>
+
+
+            <!-- Card 15 -->
+            <div class="item-card" data-category="Electronics">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1763034179057-acad3a072568" alt="Laptop Bag">
+                    <div class="card-tags">
+                        <span class="tag-category">🏷️ Electronics</span>
+                        <span class="tag-date">Sep 26, 2026</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="item-title">Laptop Bag</h3>
+                    <p class="location item-location">📍 Room 321 (Main)</p>
+                    <a href="itemdetails(Laptopbag).html" class="btn-details">VIEW DETAILS</a>
+                </div>
+            </div>
+
+
+            <!-- Card 16 -->
+            <div class="item-card" data-category="Electronics">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1521939094609-93aba1af40d7" alt="Cellphone">
+                    <div class="card-tags">
+                        <span class="tag-category">🏷️ Electronics</span>
+                        <span class="tag-date">Sep 26, 2026</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="item-title">Cellphone</h3>
+                    <p class="location item-location">📍 Room 101 (Main)</p>
+                    <a href="itemdetails(cellphone1).html" class="btn-details">VIEW DETAILS</a>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!-- PAGINATION CONTROLS (Nakalagay sa ibaba ng mga cards at sa gitna bago ang footer) -->
+        <div class="pagination-container" id="paginationContainer">
+            <button id="prevBtn" class="page-btn" onclick="changePage(-1)" title="Previous Page">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div id="pageNumbers" style="display: flex; gap: 8px;">
+                <!-- Dynamic numbers (1, 2, 3...) will load here automatically -->
+            </div>
+            <button id="nextBtn" class="page-btn" onclick="changePage(1)" title="Next Page">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+
+
+    </main>
+
+
+    <!-- FOOTER SECTION -->
+    <footer style="background-color: #0b2241; color: #ffffff; padding: 60px 8% 30px 8%;">
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; margin-bottom: 40px;">
+            <div style="flex: 1.5; min-width: 200px;">
+                <div style="display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; margin-bottom: 15px;">
+                    <img src="LOGO.png" alt="IFoundIT Logo" style="height: 30px;">
+                    <span>IFoundIT</span>
+                </div>
+                <p style="color: #b0c4de; font-size: 14px; line-height: 1.6; max-width: 320px; margin: 0;">A student-led platform dedicated to recovering lost gear and keeping our school community connected.</p>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h4 style="font-size: 16px; margin-bottom: 20px; font-weight: 700;">Lost & Found Platform</h4>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 10px;"><a href="home.html#howitworks" style="color: #b0c4de; text-decoration: none; font-size: 14px;">How It Works</a></li>
+                    <li style="margin-bottom: 10px;"><a href="reportlostfinal.html" style="color: #b0c4de; text-decoration: none; font-size: 14px;">Report a Lost Item</a></li>
+                    <li style="margin-bottom: 10px;"><a href="browsefinal.html" style="color: #b0c4de; text-decoration: none; font-size: 14px;">Browse Found Items</a></li>
+                </ul>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h4 style="font-size: 16px; margin-bottom: 20px; font-weight: 700;">About</h4>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 10px;"><a href="aboutusfinal.html" style="color: #b0c4de; text-decoration: none; font-size: 14px;">About the System</a></li>
+                    <li style="margin-bottom: 10px;"><a href="#" style="color: #b0c4de; text-decoration: none; font-size: 14px;">Campus Safety</a></li>
+                </ul>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h4 style="font-size: 16px; margin-bottom: 20px; font-weight: 700;">Support & Socials</h4>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 10px;"><a href="https://www.lcportal.online/login.php" style="color: #b0c4de; text-decoration: none; font-size: 14px;">School Portal / LMS Link</a></li>
+                    <li style="margin-bottom: 10px;"><a href="claimrequestfinal.html" style="color: #b0c4de; text-decoration: none; font-size: 14px;">Claiming Guidelines</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr style="border: none; border-top: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 30px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; font-size: 13px; color: #b0c4de;">
+            <p style="margin: 0;">&copy; 2026 IFoundIT. All rights reserved.</p>
+            <div style="display: flex; gap: 15px;">
+                <a href="https://www.facebook.com/liamgabriel.articona.9" style="color: #ffffff; font-size: 16px; text-decoration: none;"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/vccmarco/" style="color: #ffffff; font-size: 16px; text-decoration: none;"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com" style="color: #ffffff; font-size: 16px; text-decoration: none;"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

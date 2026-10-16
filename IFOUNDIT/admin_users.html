@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IFoundIT | Users</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body style="margin: 0; background-color: #f8fafc; font-family: sans-serif;">
+
+    <!-- NAVBAR -->
+    <header class="dashboard-navbar">
+
+        <a href="dashboardfinal.html" class="dashboard-logo-area">
+            <img src="LOGO.png"
+                 alt="IFoundIT Logo"
+                 style="height: 35px; width: auto; object-fit: contain;">
+
+            <span>IFoundIT</span>
+        </a>
+
+
+        <nav class="dashboard-nav-links">
+
+            <a href="dashboardfinal.html">
+                DASHBOARD
+            </a>
+
+
+            <div class="dropdown">
+
+                <a href="#">
+                    REPORT
+                    <i class="fa-solid fa-chevron-down"
+                       style="font-size: 10px; margin-left: 4px;"></i>
+                </a>
+
+                <div class="dropdown-content">
+
+                    <a href="reportfoundfinal.html">
+                        <i class="fa-solid fa-box-open"
+                           style="margin-right: 8px; color: #10b981;"></i>
+                        Report Found Item
+                    </a>
+
+                    <a href="reportlostfinal.html">
+                        <i class="fa-solid fa-magnifying-glass"
+                           style="margin-right: 8px; color: #e11d48;"></i>
+                        Report Lost Item
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <a href="browsefinal.html">
+                BROWSE
+            </a>
+
+
+            <a href="claimrequestfinal.html">
+                CLAIM REQUEST
+            </a>
+
+        </nav>
+
+
+        <div>
+            <a href="home.html" class="dashboard-logout-btn">
+                Logout
+            </a>
+        </div>
+
+    </header>
+
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <h1>
+            Welcome, <span id="Admin">Admin</span>!
+        </h1>
+
+
+        <!-- STATISTICS -->
+        <div class="stats">
+
+            <div class="stat">
+                <span class="stat-label">
+                    Lost Items
+                </span>
+
+                <strong>
+                    3
+                </strong>
+            </div>
+
+
+            <div class="stat">
+                <span class="stat-label">
+                    Found Items
+                </span>
+
+                <strong>
+                    3
+                </strong>
+            </div>
+
+
+            <div class="stat">
+                <span class="stat-label">
+                    Users
+                </span>
+
+                <strong>
+                    6
+                </strong>
+            </div>
+
+
+            <div class="stat">
+                <span class="stat-label">
+                    Pending Review
+                </span>
+
+                <strong>
+                    2
+                </strong>
+            </div>
+
+        </div>
+
+
+
+        <!-- TABS -->
+        <nav class="tabs" aria-label="Dashboard sections">
+
+            <a href="admin_report.html">
+                Reports
+            </a>
+
+            <a href="admin_users.html"
+               class="active"
+               aria-current="page">
+                Users
+            </a>
+
+            <a href="admin_approval.html">
+                Approval
+            </a>
+
+        </nav>
+
+    </section>
+
+
+
+    <!-- USERS PANEL -->
+    <main class="panel">
+
+        <div class="panel-head">
+
+            <h2>
+                Users Management
+            </h2>
+
+
+            <div class="filters">
+
+                <select aria-label="Filter by role">
+
+                    <option>
+                        All roles
+                    </option>
+
+                    <option>
+                        Admin
+                    </option>
+
+                    <option>
+                        User
+                    </option>
+
+                </select>
+
+
+                <input
+                    type="search"
+                    placeholder="Search name, email or contact..."
+                    aria-label="Search users">
+
+            </div>
+
+        </div>
+
+
+
+        <!-- USERS TABLE -->
+        <div class="table-wrap">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Name
+                        </th>
+
+                        <th>
+                            Email
+                        </th>
+
+                        <th>
+                            Contact No.
+                        </th>
+
+                        <th>
+                            Role
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                    <!-- ANGELYN DORIA -->
+                    <tr>
+
+                        <td>
+                            Angelyn Doria
+                        </td>
+
+                        <td>
+                            angelyn.doria@lc.edu.ph
+                        </td>
+
+                        <td>
+                            0917 111 2233
+                        </td>
+
+                        <td>
+                            <span class="status admin">
+                                Admin
+                            </span>
+                        </td>
+
+                        <td>
+                            <span class="presence online">
+                                <i class="dot"></i>
+                                Online
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- STEPHEN TAN -->
+                    <tr>
+
+                        <td>
+                            Stephen Tan
+                        </td>
+
+                        <td>
+                            tan.Stephen@lc.edu.ph
+                        </td>
+
+                        <td>
+                            0918 222 3344
+                        </td>
+
+                        <td>
+                            <span class="status admin">
+                                Admin
+                            </span>
+                        </td>
+
+                        <td>
+                            <span class="presence online">
+                                <i class="dot"></i>
+                                Online
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- LOUISE ASENDIDO -->
+                    <tr>
+
+                        <td>
+                            Louise Asendido
+                        </td>
+
+                        <td>
+                            louise.a@lc.edu.ph
+                        </td>
+
+                        <td>
+                            0919 333 4455
+                        </td>
+
+                        <td>
+                            <span class="status admin">
+                                Admin
+                            </span>
+                        </td>
+
+                        <td>
+                            <span class="presence offline">
+                                <i class="dot"></i>
+                                Offline
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- LIAM ARTICONA -->
+                    <tr>
+
+                        <td>
+                            Liam Articona
+                        </td>
+
+                        <td>
+                            liam.articona@lc.edu.ph
+                        </td>
+
+                        <td>
+                            0920 444 5566
+                        </td>
+
+                        <td>
+                            <span class="status admin">
+                                Admin
+                            </span>
+                        </td>
+
+                        <td>
+                            <span class="presence offline">
+                                <i class="dot"></i>
+                                Offline
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- VOUGHN BALCITA -->
+                    <tr>
+
+                        <td>
+                            Voughn Balcita
+                        </td>
+
+                        <td>
+                            balcitavon@lc.edu.ph
+                        </td>
+
+                        <td>
+                            0921 555 6677
+                        </td>
+
+                        <td>
+                            <span class="status admin">
+                                Admin
+                            </span>
+                        </td>
+
+                        <td>
+                            <span class="presence online">
+                                <i class="dot"></i>
+                                Online
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- SOFIA MENDOZA -->
+                    <tr>
+
+                        <td>
+                            Sofia Mendoza
+                        </td>
+
+                        <td>
+                            sofia.mendoza@lc.edu.ph
+                        </td>
+
+                        <td>
+                            0956 567 8901
+                        </td>
+
+                        <td>
+                            <span class="status user">
+                                User
+                            </span>
+                        </td>
+
+                        <td>
+                            <span class="presence online">
+                                <i class="dot"></i>
+                                Online
+                            </span>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFoundIT - Dashboard</title> 
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body style="margin: 0; background-color: #f8fafc; font-family: sans-serif;">
+
+    <header class="dashboard-navbar">
+        <a href="dashboardfinal.html" class="dashboard-logo-area">
+            <img src="LOGO.png" alt="IFoundIT Logo" style="height: 35px; width: auto; object-fit: contain;">
+            <span>IFoundIT</span>
+        </a>
+        
+        <nav class="dashboard-nav-links">
+            <a href="dashboardfinal.html" class="active">DASHBOARD</a>
+            
+            <div class="dropdown">
+                <a href="#">REPORT <i class="fa-solid fa-chevron-down" style="font-size: 10px; margin-left: 4px;"></i></a>
+                <div class="dropdown-content">
+                    <a href="reportfoundfinal.html"><i class="fa-solid fa-box-open" style="margin-right: 8px; color: #10b981;"></i> Report Found Item</a>
+                    <a href="reportlostfinal.html"><i class="fa-solid fa-magnifying-glass" style="margin-right: 8px; color: #e11d48;"></i> Report Lost Item</a>
+                </div>
+            </div>
+ <a href="browsefinal.html" class="active">BROWSE</a>
+      <a href="claimrequestfinal.html" class="active">CLAIM REQUEST</a>       
+       <a href="aboutusfinal.html" class="active">ABOUT US</a>
+          
+        </nav>
+
+        <div>
+            <a href="home.html" class="dashboard-logout-btn">Logout</a>  
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="dashboard-main" style="padding: 40px 8%;">
+        
+        <!-- WELCOME SECTION -->
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 30px; margin-bottom: 40px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h1 style="font-size: 56px; font-weight: 800; color: #0b1f3a; margin: 0 0 7px 0; letter-spacing: 1px;">Welcome!</h1>
+                <p style="font-size: 18px; color: #6a737d; margin: 0 0 12px 0; line-height: 1;">Ready to solve a campus mystery? Report a find or track your lost gear.</p>
+                
+               <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 30px;">
+    <a href="reportfoundfinal.html" style="flex: 1; text-align: center; background: #0b2241; color: #fff; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600;">REPORT FOUND ITEMS</a>
+    <a href="reportlostfinal.html" style="flex: 1; text-align: center; background: #0b2241; color: #fff; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600;">REPORT LOST ITEMS</a>
+    <a href="browsefinal.html" style="flex: 1; text-align: center; background: #0b2241; color: #fff; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600;">VIEW ITEMS</a>
+</div>
+
+               
+            </div>
+
+            <!-- UPDATES CARD -->
+            <div style="background: #eaf3fd; border-radius: 16px; padding: 30px; width: 340px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h3 style="margin: 0; font-size: 20px; font-weight: 800; color: #0b2241;">UPDATES</h3>
+                    <span style="background-color: #38bdf8; color: #fff; font-weight: 700; font-size: 12px; padding: 2px 10px; border-radius: 12px;">0</span>
+                </div>
+                <div style="text-align: center; padding: 20px 0; color: #6a737d;">
+                    <i class="fa-solid fa-bell-slash" style="font-size: 32px; margin-bottom: 12px; color: #94a3b8;"></i>
+                    <p style="margin: 0; font-weight: 600; font-size: 16px; color: #0b2241;">All caught up!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- STATS CARDS GRID -->
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 50px;">
+            <div style="background: #fff; border-left: 4px solid #0284c7; border-radius: 12px; padding: 24px; flex: 1; min-width: 260px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); display: flex; align-items: center; justify-content: space-between;">
+                <div>
+                    <span style="font-size: 12px; font-weight: 700; color: #6a737d; letter-spacing: 1px;">ITEMS YOU LOST</span>
+                    <h2 style="font-size: 36px; font-weight: 800; margin: 5px 0 0 0; color: #0b2241;">0</h2>
+                </div>
+                <div style="width: 48px; height: 48px; background:#ecfdf5; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #10b981; font-size: 20px;">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div style="background: #fff; border-left: 4px solid #0284c7; border-radius: 12px; padding: 24px; flex: 1; min-width: 260px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); display: flex; align-items: center; justify-content: space-between;">
+                <div>
+                    <span style="font-size: 12px; font-weight: 700; color: #6a737d; letter-spacing: 1px;">ITEMS YOU FOUND</span>
+                    <h2 style="font-size: 36px; font-weight: 800; margin: 5px 0 0 0; color: #0b2241;">1</h2>
+                </div>
+                <div style="width: 48px; height: 48px; background: #ecfdf5; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #10b981; font-size: 20px;">
+                    <i class="fa-solid fa-box-open"></i>
+                </div>
+            </div>
+
+            <div style="background: #fff; border-left: 4px solid #0284c7; border-radius: 12px; padding: 24px; flex: 1; min-width: 260px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); display: flex; align-items: center; justify-content: space-between;">
+                <div>
+                    <span style="font-size: 12px; font-weight: 700; color: #6a737d; letter-spacing: 1px;">TOTAL CLAIMED</span>
+                    <h2 style="font-size: 36px; font-weight: 800; margin: 5px 0 0 0; color: #0b2241;">0</h2>
+                </div>
+                <div style="width: 48px; height: 48px; background: #ecfdf5; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #10b981; font-size: 20px;">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+            </div>
+        </div>
+
+     <div class="table-container" style="background: #ffffff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+    <h2 style="font-size: 20px; color: #0b2241; margin-bottom: 20px; font-weight: bold;">Your Claim Requests</h2>
+    
+    <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px;">
+        <thead>
+            <tr style="border-bottom: 1px solid #e2e8f0; color: #64748b; font-size: 12px; letter-spacing: 0.5px;">
+                <th style="padding-bottom: 12px;">ITEM</th>
+                <th style="padding-bottom: 12px;">SUBMITTED ON</th>
+                <th style="padding-bottom: 12px;">TRACKING STATUS</th>
+                <th style="padding-bottom: 12px; text-align: right;">ACTION</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Row 1: Pending Status -->
+            <tr style="border-bottom: 1px solid #f1f5f9;">
+                <td style="padding: 15px 0; display: flex; align-items: center; gap: 12px;">
+                    <img src="https://images.unsplash.com/photo-1785223932005-188bbd9b948a" alt="Umbrella" style="width: 40px; height: 40px; border-radius: 6px; object-fit: cover;">
+                    <span style="font-weight: bold; color: #1e293b;">Umbrella</span>
+                </td>
+                <td style="color: #475569;">Sep 27, 2026</td>
+                <td>
+                    <span style="display: inline-block; width: 130px; text-align: center; background-color: #fef3c7; color: #0b3c5d; padding: 5px 10px; border-radius: 20px; font-size: 12px; font-weight: bold;">Pending Review</span>
+                </td>
+                <td style="text-align: right;">
+                    <a href="itemdetails(umbrella).html" style="color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 13px;">View Details</a>
+                </td>
+            </tr>
+
+            <!-- Row 2: Approved Status -->
+            <tr style="border-bottom: 1px solid #f1f5f9;">
+                <td style="padding: 15px 0; display: flex; align-items: center; gap: 12px;">
+                    <img src="https://images.unsplash.com/photo-1574607383077-47ddc2dc51c4" alt="Scientific Calculators" style="width: 40px; height: 40px; border-radius: 6px; object-fit: cover;">
+                    <span style="font-weight: bold; color: #1e293b;">Scientific Calculators</span>
+                </td>
+                <td style="color: #475569;">Sep 26, 2026</td>
+                <td>
+                    <span style="display: inline-block; width: 130px; text-align: center; background-color: #dcfce7; color: #0b3c5d; padding: 5px 10px; border-radius: 20px; font-size: 12px; font-weight: bold;">Approved</span>
+                </td>
+                <td style="text-align: right;">
+                    <a href="itemdetailsfimal.html" style="color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 13px;">View Details</a>
+                </td>
+            </tr>
+
+            <!-- Row 3: Declined Status -->
+            <tr>
+                <td style="padding: 15px 0; display: flex; align-items: center; gap: 12px;">
+                    <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=500" alt="iOS Charger" style="width: 40px; height: 40px; border-radius: 6px; object-fit: cover;">
+                    <span style="font-weight: bold; color: #1e293b;">iOS Charger</span>
+                </td>
+                <td style="color: #475569;">Sep 25, 2026</td>
+                <td>
+                    <span style="display: inline-block; width: 130px; text-align: center; background-color: #fee2e2; color: #0b3c5d; padding: 5px 10px; border-radius: 20px; font-size: 12px; font-weight: bold;">Declined</span>
+                </td>
+                <td style="text-align: right;">
+                    <a href="itemdetails(ioscharger).html" style="color: #0b3c5d; text-decoration: none; font-weight: bold; font-size: 13px;">View Details</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+        </div>
+
+        <!-- CAMPUS RECOVERY STATS BANNER -->
+        <div style="background: linear-gradient(135deg, #0b2241 0%, #0f4c81 100%); border-radius: 20px; padding: 40px; color: #fff; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px; margin-bottom: 60px;">
+            <div>
+                <h2 style="font-size: 32px; font-weight: 800; margin: 0; line-height: 1.2;">CAMPUS RECOVERY<br>STATS</h2>
+            </div>
+            <div style="display: flex; gap: 40px; flex-wrap: wrap;">
+                <div style="text-align: center;">
+                    <span style="font-size: 12px; font-weight: 700; color: #93c5fd; letter-spacing: 1px; text-transform: uppercase;">Total Items Logged:</span>
+                    <h3 style="font-size: 32px; font-weight: 800; margin: 5px 0 0 0;">1,050</h3>
+                </div>
+                <div style="text-align: center;">
+                    <span style="font-size: 12px; font-weight: 700; color: #93c5fd; letter-spacing: 1px; text-transform: uppercase;">Active Searchers Today:</span>
+                    <h3 style="font-size: 32px; font-weight: 800; margin: 5px 0 0 0;">659</h3>
+                </div>
+                <div style="text-align: center;">
+                    <span style="font-size: 12px; font-weight: 700; color: #93c5fd; letter-spacing: 1px; text-transform: uppercase;">Successfully Returned:</span>
+                    <h3 style="font-size: 32px; font-weight: 800; margin: 5px 0 0 0;">450</h3>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer style="background-color: #0b2241; color: #ffffff; padding: 60px 8% 30px 8%;">
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; margin-bottom: 40px;">
+            <div style="flex: 1.5; min-width: 200px;">
+                <div style="display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; margin-bottom: 15px;">
+                    <img src="LOGO.png" alt="IFoundIT Logo" style="height: 30px;">
+                    <span>IFoundIT</span>
+                </div>
+                <p style="color: #b0c4de; font-size: 14px; line-height: 1.6; max-width: 320px; margin: 0;">A student-led platform dedicated to recovering lost gear and keeping our school community connected.</p>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h4 style="font-size: 16px; margin-bottom: 20px; font-weight: 700;">Lost & Found Platform</h4>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 10px;"><a href="home.html#howitworks" style="color: #b0c4de; text-decoration: none; font-size: 14px;">How It Works</a></li>
+                    <li style="margin-bottom: 10px;"><a href="reportlostfinal.html" style="color: #b0c4de; text-decoration: none; font-size: 14px;">Report a Lost Item</a></li>
+                    <li style="margin-bottom: 10px;"><a href="browsefinal.html" style="color: #b0c4de; text-decoration: none; font-size: 14px;">Browse Found Items</a></li>
+                </ul>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h4 style="font-size: 16px; margin-bottom: 20px; font-weight: 700;">About</h4>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 10px;"><a href="aboutusfinal.html" style="color: #b0c4de; text-decoration: none; font-size: 14px;">About the System</a></li>
+                    <li style="margin-bottom: 10px;"><a href="#" style="color: #b0c4de; text-decoration: none; font-size: 14px;">Campus Safety</a></li>
+                </ul>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h4 style="font-size: 16px; margin-bottom: 20px; font-weight: 700;">Support & Socials</h4>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 10px;"><a href="https://www.lcportal.online/login.php" style="color: #b0c4de; text-decoration: none; font-size: 14px;">School Portal / LMS Link</a></li>
+                    <li style="margin-bottom: 10px;"><a href="claimrequestfinal.html" style="color: #b0c4de; text-decoration: none; font-size: 14px;">Claiming Guidelines</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr style="border: none; border-top: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 30px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; font-size: 13px; color: #b0c4de;">
+            <p style="margin: 0;">&copy; 2026 IFoundIT. All rights reserved.</p>
+            <div style="display: flex; gap: 15px;">
+                <a href="https://www.facebook.com/liamgabriel.articona.9" style="color: #ffffff; font-size: 16px; text-decoration: none;"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/vccmarco/" style="color: #ffffff; font-size: 16px; text-decoration: none;"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com" style="color: #ffffff; font-size: 16px; text-decoration: none;"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

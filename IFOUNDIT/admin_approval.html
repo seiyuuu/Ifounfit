@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IFoundIT | Approval</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body style="margin: 0; background-color: #f8fafc; font-family: sans-serif;">
+
+
+    <!-- NAVBAR -->
+    <header class="dashboard-navbar">
+
+        <a href="dashboardfinal.html" class="dashboard-logo-area">
+            <img src="LOGO.png"
+                 alt="IFoundIT Logo"
+                 style="height: 35px; width: auto; object-fit: contain;">
+
+            <span>IFoundIT</span>
+        </a>
+
+
+        <nav class="dashboard-nav-links">
+
+            <a href="dashboardfinal.html">
+                DASHBOARD
+            </a>
+
+
+            <div class="dropdown">
+
+                <a href="#">
+                    REPORT
+                    <i class="fa-solid fa-chevron-down"
+                       style="font-size: 10px; margin-left: 4px;"></i>
+                </a>
+
+                <div class="dropdown-content">
+
+                    <a href="reportfoundfinal.html">
+                        <i class="fa-solid fa-box-open"
+                           style="margin-right: 8px; color: #10b981;"></i>
+                        Report Found Item
+                    </a>
+
+                    <a href="reportlostfinal.html">
+                        <i class="fa-solid fa-magnifying-glass"
+                           style="margin-right: 8px; color: #e11d48;"></i>
+                        Report Lost Item
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <a href="browsefinal.html">
+                BROWSE
+            </a>
+
+
+            <a href="claimrequestfinal.html">
+                CLAIM REQUEST
+            </a>
+
+        </nav>
+
+
+        <div>
+            <a href="home.html" class="dashboard-logout-btn">
+                Logout
+            </a>
+        </div>
+
+    </header>
+
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <h1>
+            Welcome, <span id="Admin">Admin</span>!
+        </h1>
+
+
+        <!-- STATISTICS -->
+        <div class="stats">
+
+            <div class="stat">
+                <span class="stat-label">
+                    Lost Items
+                </span>
+
+                <strong>
+                    3
+                </strong>
+            </div>
+
+
+            <div class="stat">
+                <span class="stat-label">
+                    Found Items
+                </span>
+
+                <strong>
+                    3
+                </strong>
+            </div>
+
+
+            <div class="stat">
+                <span class="stat-label">
+                    Users
+                </span>
+
+                <strong>
+                    6
+                </strong>
+            </div>
+
+
+            <div class="stat">
+                <span class="stat-label">
+                    Pending Review
+                </span>
+
+                <strong>
+                    2
+                </strong>
+            </div>
+
+        </div>
+
+
+
+        <!-- TABS -->
+        <nav class="tabs" aria-label="Dashboard sections">
+
+            <a href="admin_report.html">
+                Reports
+            </a>
+
+            <a href="admin_users.html">
+                Users
+            </a>
+
+            <a href="admin_approval.html"
+               class="active"
+               aria-current="page">
+                Approval
+            </a>
+
+        </nav>
+
+    </section>
+
+
+
+    <!-- APPROVAL PANEL -->
+    <main class="panel">
+
+        <div class="panel-head">
+
+            <h2>
+                Item Approval
+            </h2>
+
+
+            <div class="filters">
+
+                <select aria-label="Filter by type">
+
+                    <option>
+                        Lost and found
+                    </option>
+
+                    <option>
+                        Lost items
+                    </option>
+
+                    <option>
+                        Found items
+                    </option>
+
+                </select>
+
+
+                <select aria-label="Filter by category">
+
+                    <option>
+                        All categories
+                    </option>
+
+                    <option>
+                        Electronics
+                    </option>
+
+                    <option>
+                        Personal Belongings
+                    </option>
+
+                    <option>
+                        School Supply
+                    </option>
+
+                    <option>
+                        Documents &amp; IDs
+                    </option>
+
+                    <option>
+                        Clothing &amp; Accessories
+                    </option>
+
+                    <option>
+                        Bags
+                    </option>
+
+                    <option>
+                        Others
+                    </option>
+
+                </select>
+
+
+                <select aria-label="Sort items">
+
+                    <option>
+                        Recent first
+                    </option>
+
+                    <option>
+                        Older first
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- APPROVAL LIST -->
+        <ul class="approval-list">
+
+
+            <!-- STUDENT ID -->
+            <li class="approval-item">
+
+                <div class="approval-thumb placeholder">
+                    <i class="fa-solid fa-id-card"></i>
+                </div>
+
+
+                <div class="approval-info">
+
+                    <h3>
+                        Student ID
+                    </h3>
+
+                    <p>
+                        Lost near: Room 204
+                    </p>
+
+                    <p class="muted">
+                        Documents &amp; IDs
+                        &middot;
+                        Reported by Angela Cruz
+                        &middot;
+                        0935 345 6789
+                        &middot;
+                        2026-10-09
+                    </p>
+
+                </div>
+
+
+                <div class="approval-actions">
+
+                    <button type="button"
+                            class="btn-approve">
+                        Approve
+                    </button>
+
+                    <button type="button"
+                            class="btn-reject">
+                        Reject
+                    </button>
+
+                </div>
+
+            </li>
+
+
+
+            <!-- WIRELESS EARBUDS -->
+            <li class="approval-item">
+
+                <div class="approval-thumb placeholder">
+                    <i class="fa-solid fa-headphones"></i>
+                </div>
+
+
+                <div class="approval-info">
+
+                    <h3>
+                        Wireless Earbuds
+                    </h3>
+
+                    <p>
+                        Found near: Computer Laboratory
+                    </p>
+
+                    <p class="muted">
+                        Electronics
+                        &middot;
+                        Reported by Mark Villanueva
+                        &middot;
+                        0945 456 7890
+                        &middot;
+                        2026-10-08
+                    </p>
+
+                </div>
+
+
+                <div class="approval-actions">
+
+                    <button type="button"
+                            class="btn-approve">
+                        Approve
+                    </button>
+
+                    <button type="button"
+                            class="btn-reject">
+                        Reject
+                    </button>
+
+                </div>
+
+            </li>
+
+
+        </ul>
+
+    </main>
+
+</body>
+</html>

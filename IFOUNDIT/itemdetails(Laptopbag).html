@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFoundIT - Item Details</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="itemdetailsfinal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body style="margin: 0; background-color: #f8fafc; font-family: sans-serif;">
+
+    <header class="dashboard-navbar">
+        <a href="dashboardfinal.html" class="dashboard-logo-area">
+            <img src="LOGO.png" alt="IFoundIT Logo" style="height: 35px; width: auto; object-fit: contain;">
+            <span>IFoundIT</span>
+        </a>
+        
+        <nav class="dashboard-nav-links">
+            <a href="dashboardfinal.html" class="active">DASHBOARD</a>
+            
+            <div class="dropdown">
+                <a href="#">REPORT <i class="fa-solid fa-chevron-down" style="font-size: 10px; margin-left: 4px;"></i></a>
+                <div class="dropdown-content">
+                    <a href="reportfoundfinal.html"><i class="fa-solid fa-box-open" style="margin-right: 8px; color: #10b981;"></i> Report Found Item</a>
+                    <a href="reportlostfinal.html"><i class="fa-solid fa-magnifying-glass" style="margin-right: 8px; color: #e11d48;"></i> Report Lost Item</a>
+                </div>
+            </div>
+            <a href="browsefinal.html" class="active">BROWSE</a>
+            <a href="claimrequestfinal.html" class="active">CLAIM REQUEST</a>      
+            <a href="aboutusfinal.html" class="active">ABOUT US</a>
+        </nav>
+
+        <div>
+            <a href="home.html" class="dashboard-logout-btn">Logout</a>  
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- Breadcrumb / Header Title -->
+        <div class="breadcrumb">
+            <a href="browsefinal.html" class="crumb-inactive">BROWSE ITEMS</a>
+            <span class="crumb-separator">/</span>
+            <span class="crumb-active">ITEM DETAILS</span>
+        </div>
+
+        <!-- DETAILS CONTAINER (2-Column Layout) -->
+        <div class="details-container">
+
+            <!-- LEFT COLUMN: Item Card Preview -->
+            <div class="left-column">
+                <div class="item-card-image-only">
+                    <img src="https://images.unsplash.com/photo-1763034179057-acad3a072568" alt="Laptop Bag">
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Item Details & Action -->
+            <div class="right-column">
+
+                <!-- Status Badges -->
+                <div class="status-header">
+                    <span class="badge-pending">Pending</span>
+                    <span class="badge-id">ID: PI0007</span>
+                </div>
+
+                <!-- Item Title -->
+                <h1 class="item-title">Laptop Bag</h1>
+
+                <!-- Info Box -->
+                <div class="info-card">
+                    <div class="info-row">
+                        <div class="info-group">
+                            <span class="info-label">CATEGORY</span>
+                            <span class="info-value">🏷️ Electronics</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-label">DATE REPORTED</span>
+                            <span class="info-value">Sep 26, 2026</span>
+                        </div>
+                    </div>
+                    <div class="info-group margin-top">
+                        <span class="info-label">LOCATION</span>
+                        <span class="info-value location-text">📍 Room 321 (Main)</span>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="description-card-box">
+                    <h4>Description</h4>
+                    <p>A black padded laptop shoulder bag was left resting against a chair in Room 321 (Main) on a Saturday afternoon, its durable textured canvas and zipped compartments fully closed.</p>
+                </div>
+
+                <!-- Claim Box -->
+                <div class="claim-box">
+                    <div class="reported-by-row">
+                        <div class="user-icon-small">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                            </svg>
+                        </div>
+                        <span>Reported by:</span>
+                        <span class="badge-reporter">TEACHER</span>
+                    </div>
+
+                    <p class="claim-prompt">Are you the owner of this item? Submit your proof to claim it back.</p>
+
+                    <a href="claimrequestfinal.html" class="btn-claim">Claim This Item</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer style="background-color: #0b2241; color: #ffffff; padding: 60px 8% 30px 8%;">
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; margin-bottom: 40px;">
+            <div style="flex: 1.5; min-width: 200px;">
+                <div style="display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; margin-bottom: 15px;">
+                    <img src="LOGO.png" alt="IFoundIT Logo" style="height: 30px;">
+                    <span>IFoundIT</span>
+                </div>
+                <p style="color: #b0c4de; font-size: 14px; line-height: 1.6; max-width: 320px; margin: 0;">A student-led platform dedicated to recovering lost gear and keeping our school community connected.</p>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h4 style="font-size: 16px; margin-bottom: 20px; font-weight: 700;">Lost & Found Platform</h4>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 10px;"><a href="home.html" style="color: #b0c4de; text-decoration: none; font-size: 14px;">How It Works</a></li>
+                    <li style="margin-bottom: 10px;"><a href="reportlostfinal.html" style="color: #b0c4de; text-decoration: none; font-size: 14px;">Report a Lost Item</a></li>
+                    <li style="margin-bottom: 10px;"><a href="browsefinal.html" style="color: #b0c4de; text-decoration: none; font-size: 14px;">Browse Found Items</a></li>
+                </ul>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h4 style="font-size: 16px; margin-bottom: 20px; font-weight: 700;">About</h4>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 10px;"><a href="aboutusfinal.html" style="color: #b0c4de; text-decoration: none; font-size: 14px;">About the System</a></li>
+                    <li style="margin-bottom: 10px;"><a href="#" style="color: #b0c4de; text-decoration: none; font-size: 14px;">Campus Safety</a></li>
+                </ul>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h4 style="font-size: 16px; margin-bottom: 20px; font-weight: 700;">Support & Socials</h4>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 10px;"><a href="https://www.lcportal.online/login.php" style="color: #b0c4de; text-decoration: none; font-size: 14px;">School Portal / LMS Link</a></li>
+                    <li style="margin-bottom: 10px;"><a href="claimrequestfinal.html" style="color: #b0c4de; text-decoration: none; font-size: 14px;">Claiming Guidelines</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr style="border: none; border-top: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 30px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; font-size: 13px; color: #b0c4de;">
+            <p style="margin: 0;">&copy; 2026 IFoundIT. All rights reserved.</p>
+            <div style="display: flex; gap: 15px;">
+                <a href="https://www.facebook.com/liamgabriel.articona.9" style="color: #ffffff; font-size: 16px; text-decoration: none;"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/vccmarco/" style="color: #ffffff; font-size: 16px; text-decoration: none;"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com" style="color: #ffffff; font-size: 16px; text-decoration: none;"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
